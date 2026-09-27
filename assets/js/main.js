@@ -1,4 +1,4 @@
-// Pink Alert: shared page behavior. The site works without JavaScript.
+// PinkAlert: shared page behavior. The site works without JavaScript.
 document.documentElement.classList.remove('no-js');
 
 // Mobile menu

@@ -1,4 +1,4 @@
-// Pink Alert: interactive 3D model of the prototype probe (three.js r128).
+// PinkAlert: interactive 3D model of the prototype probe (three.js r128).
 // Geometry follows the prototype design document: 70 × 40 mm head, 200 mm overall,
 // central ultrasound transducer, four corner force sensors (F1–F4), IMU, controller, LiPo battery.
 (() => {

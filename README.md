@@ -1,15 +1,15 @@
-# Pink Alert · [pinkalert.ai](https://pinkalert.ai)
+# PinkAlert · [pinkalert.ai](https://pinkalert.ai)
 
 **Breast health, in your hands.**
 
-Pink Alert is a low-cost, handheld breast ultrasound device paired with an AI assistant that reads each scan as **normal**, **benign** or **malignant** and tells the user, in plain language, whether they are good for now or should see a doctor. It was created by Arshia Ghatak after her own experience with breast cancer as a teenager, to make early breast-health screening accessible to young women who may never be taught what to look for and may not be able to afford a clinical ultrasound.
+PinkAlert is a low-cost, handheld breast ultrasound device paired with an AI assistant that reads each scan as **normal**, **benign** or **malignant** and tells the user, in plain language, whether they are good for now or should see a doctor. It was created by Arshia Ghatak after her own experience with breast cancer as a teenager, to make early breast-health screening accessible to young women who may never be taught what to look for and may not be able to afford a clinical ultrasound.
 
 This repository is the source for the project website, [pinkalert.ai](https://pinkalert.ai).
 
 ## What's on the site
 
 - **Home**
-  - The problem Pink Alert addresses.
+  - The problem PinkAlert addresses.
   - An interactive 3D model of the force-guided probe (ultrasound transducer, four force sensors, IMU, controller and battery), with clickable parts.
   - How the analyzer works: 29 engineered image features and a weighted ensemble of Random Forest, MLP and SVM models.
   - Links to the open-source code and the development roadmap.
@@ -19,7 +19,7 @@ This repository is the source for the project website, [pinkalert.ai](https://pi
 
 The analyzer itself lives in [breast_ultrasound_analyzer](https://github.com/arshiaghatak/breast_ultrasound_analyzer).
 
-> Pink Alert is a research prototype and educational tool. It is not a medical device, has not been cleared by the FDA, and does not diagnose cancer.
+> PinkAlert is a research prototype and educational tool. It is not a medical device, has not been cleared by the FDA, and does not diagnose cancer.
 
 ## How it's built
 
@@ -58,4 +58,4 @@ Hosted on Vercel from the `main` branch; every push redeploys the site. The doma
 
 The website's code is released under the [MIT License](LICENSE) © 2026 Arshia Ghatak.
 
-The MIT License does **not** cover the Pink Alert name, logo and brand marks, photos of Arshia Ghatak, or the device design materials. These remain the property of Arshia Ghatak and may not be reused without permission. The research paper and the BUSI sample images keep their own terms. See [LICENSE](LICENSE) for details.
+The MIT License does **not** cover the PinkAlert name, logo and brand marks, photos of Arshia Ghatak, or the device design materials. These remain the property of Arshia Ghatak and may not be reused without permission. The research paper and the BUSI sample images keep their own terms. See [LICENSE](LICENSE) for details.
