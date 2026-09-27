@@ -1,6 +1,6 @@
 // PinkAlert launch list sign-up.
 // Sends the form to the endpoint in data-endpoint (a Formspree form, which emails each sign-up
-// to Arshia and keeps a list that can be exported). Replace YOUR_FORM_ID once the form exists.
+// to Arshia and keeps a list that can be exported).
 (() => {
   const form = document.getElementById('signup-form');
   if (!form) return;
