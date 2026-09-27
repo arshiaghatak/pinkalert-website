@@ -14,7 +14,7 @@ This repository is the source for the project website, [pinkalert.ai](https://pi
   - How the analyzer works: 29 engineered image features and a weighted ensemble of Random Forest, MLP and SVM models.
   - A live demo on 21 real ultrasound scans with the models' actual outputs and expert tumor outlines.
   - Links to the open-source code and the development roadmap.
-- **Impact:** the TEDxDVHS talk *From Patient to Innovator*, the peer-reviewed paper *Machine Learning Models for Breast Cancer Diagnosis Using Ultrasound Images* (American Journal of Student Research, 2026), and ways to get involved.
+- **Research & Talks:** the TEDxDVHS talk *From Patient to Innovator*, the peer-reviewed paper *Machine Learning Models for Breast Cancer Diagnosis Using Ultrasound Images* (American Journal of Student Research, 2026), and ways to get involved.
 - **Founder:** Arshia Ghatak's story and background.
 
 The analyzer itself lives in [breast_ultrasound_analyzer](https://github.com/arshiaghatak/breast_ultrasound_analyzer).
@@ -27,7 +27,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 
 ```
 ├── index.html        Home: problem, device, analyzer, live demo, open source, roadmap
-├── impact.html       TEDx talk, research paper, get involved
+├── research.html     TEDx talk, research paper, get involved
 ├── founder.html      Founder bio
 ├── assets/css/style.css
 ├── assets/js/main.js       menu, fade-ins, count-ups, video, copy buttons
