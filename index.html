@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pink Alert · Breast health in your hands</title>
+  <meta name="description" content="Pink Alert is a handheld, force-guided ultrasound device paired with an open-source machine-learning analyzer that classifies breast ultrasound images as normal, benign or malignant.">
+  <meta name="theme-color" content="#fdf7f9">
+  <link rel="canonical" href="https://pinkalert.ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pink Alert">
+  <meta property="og:title" content="Pink Alert · Breast health in your hands">
+  <meta property="og:description" content="A handheld, force-guided ultrasound device and an open-source machine-learning analyzer for early breast health awareness.">
+  <meta property="og:url" content="https://pinkalert.ai/">
+  <meta property="og:image" content="https://pinkalert.ai/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=30">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Pink Alert home">
+      <img class="mark" src="assets/img/mark-sm.png" alt="" width="28" height="34">
+      <img class="word" src="assets/img/wordmark.png" alt="Pink Alert" width="85" height="22">
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="founder.html">Founder</a></li>
+    </ul>
+    <a class="btn btn-ghost btn-sm nav-cta" href="https://github.com/arshiaghatak/breast_ultrasound_analyzer" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      GitHub
+    </a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="label hero-label">Handheld ultrasound · <b>AI assistant</b></span>
+      <h1>Breast health, <em>in your hands.</em></h1>
+      <p class="lede">Pink Alert pairs a low-cost, force-guided ultrasound probe with a machine-learning analyzer that reads each scan as normal, benign or malignant, and tells the user plainly when it is time to see a doctor.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#demo">Try the live demo</a>
+        <a class="btn btn-ghost" href="#device">Explore the device</a>
+      </div>
+      <dl class="hero-facts">
+        <div><dt>Patent pending</dt><dd>Provisional patent filed</dd></div>
+        <div><dt>Peer-reviewed</dt><dd>Am. J. Student Research, 2026</dd></div>
+        <div><dt>MIT licensed</dt><dd>Code and models on GitHub</dd></div>
+      </dl>
+    </div>
+
+    <figure class="scan-fig">
+      <div class="bar"><span>Breast US · B-mode · Linear array</span><span class="live">Analyzing</span></div>
+      <div class="scan-view" style="aspect-ratio:655/584">
+        <img src="assets/demo/scan-15.jpg" alt="Breast ultrasound image showing an irregular dark mass, outlined by the analyzer" width="655" height="584">
+        <div class="sweep"></div>
+        <svg viewBox="0 0 655 584" aria-hidden="true">
+          <g fill="none" stroke="#ec648c" stroke-width="2">
+            <path d="M150 238 C160 196 214 180 256 196 C300 206 322 236 312 270 C304 306 262 330 218 326 C176 322 140 290 150 238 Z" stroke-dasharray="7 5"/>
+          </g>
+          <g stroke="#ec648c" stroke-width="2">
+            <path d="M136 172 h18 M136 172 v18"/><path d="M332 172 h-18 M332 172 v18"/>
+            <path d="M136 342 h18 M136 342 v-18"/><path d="M332 342 h-18 M332 342 v-18"/>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="15" fill="#ffffff">
+            <rect x="136" y="140" width="118" height="24" rx="3" fill="#c2356a"/>
+            <text x="145" y="157">ROI · MASS</text>
+          </g>
+          <g stroke="#ffffff" stroke-opacity=".55" stroke-width="1.5">
+            <path d="M632 20 V564"/>
+            <path d="M624 20 h8 M626 74 h6 M624 128 h8 M626 182 h6 M624 236 h8 M626 290 h6 M624 344 h8 M626 398 h6 M624 452 h8 M626 506 h6 M624 560 h8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="readout">
+        <div class="hot">Ensemble<b>Malignant · 91.6%</b></div>
+        <div>Random forest<b>94.0%</b></div>
+        <div>Alert<b style="color:var(--accent)">See a doctor</b></div>
+      </div>
+      <figcaption>Real output of the published Pink Alert ensemble on a malignant case from the public BUSI dataset (Al-Dhabyani et al.). The outline is illustrative.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section style="padding-top:0">
+  <div class="wrap statement">
+    <div>
+      <span class="label">The problem</span>
+      <h2>Early detection shouldn't depend on access to a radiology clinic.</h2>
+    </div>
+    <div class="cols">
+      <div><h4>Awareness</h4><p>Young women are rarely taught what healthy breast tissue looks or feels like, so changes can go unnoticed.</p></div>
+      <div><h4>Access</h4><p>Clinical ultrasound is safe and effective, but cost and availability keep it out of reach for many people.</p></div>
+      <div><h4>Interpretation</h4><p>Reading an ultrasound takes expertise. Pink Alert turns an image into a clear, conservative next step.</p></div>
+      <div><h4>Responsibility</h4><p>Pink Alert is an early-warning aid designed to route people to a doctor, never to replace one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVICE ============ -->
+<section id="device" class="stage-section">
+  <div class="wrap">
+    <div class="head center">
+      <span class="label">The device</span>
+      <h2>A handheld probe that guides every scan.</h2>
+      <p class="lede">The Pink Alert probe combines a central ultrasound transducer with four force sensors and an inertial measurement unit. It records not only the image, but how firmly and at what angle it was taken, so an untrained user can capture a scan that is consistent and comparable over time.</p>
+    </div>
+
+    <div class="viewer">
+      <div class="viewer-canvas" id="viewer" aria-label="Interactive 3D model of the Pink Alert probe. Drag to rotate, scroll or pinch to zoom, and select a numbered point to learn about each part.">
+        <div class="viewer-fallback" hidden><img src="assets/img/design-overview.jpg" alt="Product design overview of the Pink Alert probe"></div>
+        <div class="viewer-tools">
+          <button class="tool" type="button" data-act="internals" aria-pressed="false">Show internals</button>
+          <button class="tool" type="button" data-act="spin" aria-pressed="true">Auto-rotate</button>
+          <button class="tool" type="button" data-act="in" aria-label="Zoom in">+</button>
+          <button class="tool" type="button" data-act="out" aria-label="Zoom out">−</button>
+          <button class="tool" type="button" data-act="reset">Reset view</button>
+          <span class="viewer-hint">Drag to rotate · Scroll to zoom</span>
+        </div>
+      </div>
+      <aside class="viewer-panel" aria-live="polite">
+        <span class="part-no" id="part-no">Overview</span>
+        <h3 id="part-title">Pink Alert probe, prototype design</h3>
+        <p id="part-body">A 200 mm handheld probe with a 70 × 40 mm scanning head. Select a numbered point on the model, or a part below, and its details open in a pop-up beside it.</p>
+        <dl id="part-specs">
+          <dt>Size</dt><dd>70 × 40 × 200 mm</dd>
+          <dt>Body</dt><dd>Medical-grade ABS + PC</dd>
+          <dt>Sensing</dt><dd>Ultrasound, 4 × force, IMU</dd>
+        </dl>
+        <ul class="parts" id="parts"></ul>
+      </aside>
+    </div>
+
+    <dl class="spec-grid">
+      <div><dt>Imaging</dt><dd>5–15 MHz<small>High-frequency linear array</small></dd></div>
+      <div><dt>Force sensing</dt><dd>4 corner sensors<small>F1–F4 map pressure and tilt</small></dd></div>
+      <div><dt>Orientation</dt><dd>6-axis IMU<small>Accelerometer and gyroscope</small></dd></div>
+      <div><dt>Power &amp; link</dt><dd>3.7 V LiPo<small>USB or Bluetooth to the app</small></dd></div>
+    </dl>
+
+    <div style="margin-top:clamp(64px,8vw,96px)">
+      <div class="head" style="margin-bottom:28px">
+        <span class="label">How a scan works</span>
+        <h3 style="font-size:clamp(1.6rem,2.6vw,2.1rem)">From probe placement to a saved result.</h3>
+      </div>
+      <ol class="sequence">
+        <li><b>Position</b><span>The app shows which breast region to scan next.</span></li>
+        <li><b>Apply pressure</b><span>Force sensors guide the user to firm, even contact.</span></li>
+        <li><b>Capture</b><span>Ultrasound frames are stored with force, angle and time.</span></li>
+        <li><b>Analyze</b><span>A quality gate checks the scan, then the analyzer classifies it.</span></li>
+        <li><b>Alert</b><span>A clear next step, saved for comparison with future scans.</span></li>
+      </ol>
+    </div>
+
+    <figure class="doc-figure">
+      <button type="button" data-lightbox aria-label="Open the full product design overview">
+        <img src="assets/img/design-overview.jpg" alt="Product design overview sheet: probe views, dimensions, system architecture and workflow" width="1536" height="1024" loading="lazy">
+      </button>
+      <figcaption>Product design overview from the Pink Alert prototype design document. Select to enlarge.</figcaption>
+    </figure>
+    <dialog class="lightbox" aria-label="Product design overview">
+      <button class="close" aria-label="Close">×</button>
+      <img src="assets/img/design-overview.jpg" alt="Product design overview sheet, enlarged" width="1536" height="1024">
+    </dialog>
+  </div>
+</section>
+
+<!-- ============ ANALYZER ============ -->
+<section id="analyzer">
+  <div class="wrap">
+    <div class="head center">
+      <span class="label">The analyzer</span>
+      <h2>Three models, one weighted decision.</h2>
+      <p class="lede">The Breast Ultrasound Analyzer extracts 29 engineered features from each image and passes them to three classical machine-learning models. Their probabilities are combined in a weighted vote, and the result is mapped to a simple alert.</p>
+    </div>
+
+    <ol class="pipeline">
+      <li><b>Preprocess</b><span>The image is loaded, converted and resized to 224 × 224 pixels.</span></li>
+      <li><b>Extract features</b><span>29 measurements: intensity statistics, Sobel texture, lesion shape (area, perimeter, circularity, compactness) and HSV histograms.</span></li>
+      <li><b>Classify</b><span>Random Forest, a multilayer perceptron and an RBF-kernel SVM each estimate class probabilities.</span></li>
+      <li><b>Weighted vote</b><span>Probabilities are combined 60 / 25 / 15 and mapped to one of three alert levels.</span></li>
+    </ol>
+
+    <div class="two-col" style="margin-top:clamp(56px,7vw,88px)">
+      <div>
+        <h3>Ensemble weights</h3>
+        <p class="muted">Random Forest was the strongest and most balanced individual model, so it carries the most weight. In the published study the ensemble detected malignant tissue more reliably than any single model.</p>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>Model</th><th>Configuration</th><th class="num">Weight</th></tr></thead>
+            <tbody>
+              <tr><td>Random Forest</td><td>100 trees</td><td class="num"><span class="weightbar" data-w="60px" style="width:0"></span> <span data-count="60">60</span>%</td></tr>
+              <tr><td>Multilayer perceptron</td><td>ReLU, Adam optimizer</td><td class="num"><span class="weightbar" data-w="25px" style="width:0"></span> <span data-count="25">25</span>%</td></tr>
+              <tr><td>Support vector machine</td><td>RBF kernel, C = 2.0</td><td class="num"><span class="weightbar" data-w="15px" style="width:0"></span> <span data-count="15">15</span>%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 style="margin:22px 0 8px">Soft-voting rule</h4>
+        <p class="formula">P(c | x) = 0.60·P<sub>RF</sub>(c | x) + 0.25·P<sub>MLP</sub>(c | x) + 0.15·P<sub>SVM</sub>(c | x)<br>ŷ = argmax<sub>c</sub> P(c | x),&nbsp; c ∈ {benign, normal, malignant}</p>
+      </div>
+      <div>
+        <h3>Interpretable by design</h3>
+        <p class="muted">Rather than learned convolutional embeddings, each B-mode image is mapped to a 29-dimensional hand-engineered feature vector: first- and second-order intensity statistics per RGB channel; Sobel gradient-magnitude texture descriptors (mean, standard deviation and energy); morphometric descriptors of the largest thresholded contour (area, perimeter, aspect ratio, circularity 4πA/P² and compactness); and 15 HSV histogram bins. Every dimension has a physical meaning, so Random Forest Gini importances can be read directly against the sonographic cues clinicians use, such as lesion shape and margin irregularity.</p>
+        
+        <p class="muted">Features are z-score standardized per model. The class imbalance of the source data (309 benign, 159 malignant, 128 normal) was corrected by random oversampling with replacement before a stratified 70/30 split, with 5-fold cross-validation during training and per-class evaluation on row-normalized confusion matrices. Inference needs no GPU or network connection and runs on a standard laptop CPU.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(56px,7vw,88px)">
+      <h3 style="margin-bottom:20px">What the user sees</h3>
+      <div class="alerts">
+        <div><span class="pill lvl-ok">All clear</span><p><b>Normal.</b> Nothing stands out. Keep scanning regularly and save the result for comparison.</p></div>
+        <div><span class="pill lvl-watch">Worth a check</span><p><b>Benign.</b> A region was found that is most likely benign. Book a routine check-up and bring the saved scans.</p></div>
+        <div><span class="pill lvl-act">See a doctor</span><p><b>Malignant.</b> The scan shares features with malignant tissue. Seek a professional exam promptly.</p></div>
+      </div>
+    </div>
+
+    <div class="results">
+      <!-- TODO(Arshia): confirm which accuracy figure to publish. README: 84.3% (balanced test split). Paper: per-class results on 597 images. -->
+      <div><div class="n placeholder" title="Placeholder until the final figure is confirmed">~<span data-count="85">85</span>%</div><div class="l">Overall test accuracy</div></div>
+      <div><div class="n" data-count="29">29</div><div class="l">Engineered image features</div></div>
+      <div><div class="n" data-count="3">3</div><div class="l">Models in the ensemble</div></div>
+      <div><div class="n" data-count="597">597</div><div class="l">Images in the study dataset</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE DEMO ============ -->
+<section id="demo" class="stage-section">
+  <div class="wrap">
+    <div class="head center">
+      <span class="label">Live demo</span>
+      <h2>Try the analyzer on real scans.</h2>
+      <p class="lede">Drag any of the 21 ultrasound images into the analysis station, or select one. You will see the ensemble's prediction, each model's vote, the alert, and whether the prediction matched the expert label.</p>
+    </div>
+
+    <div class="demo" id="demo-app">
+      <div class="tray">
+        <div class="tray-head"><h3>Sample scans</h3><span>BUSI dataset · 21 images</span></div>
+        <div class="thumbs" id="thumbs" role="list"></div>
+        <div class="tally">
+          <span>Analyzed <b id="t-done">0</b>/21 · Correct <b id="t-right">0</b></span>
+          <span class="legend"><span><i style="background:#2e9e72"></i>Matched label</span><span><i style="background:#d08a1c"></i>Missed</span></span>
+          <button type="button" id="t-reset">Reset</button>
+        </div>
+      </div>
+      <div class="station">
+        <div class="dropzone" id="dropzone" tabindex="-1">
+          <div class="empty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+            Drop a scan here to analyze it
+          </div>
+          <div class="scanbar"></div>
+        </div>
+        <div class="result" id="result" hidden aria-live="polite">
+          <div class="result-top"><h3 id="r-title">Malignant</h3><span class="pill" id="r-pill"></span></div>
+          <p id="r-body"></p>
+          <div class="probs" id="r-probs"></div>
+          <table class="models">
+            <thead><tr><th>Model (weight)</th><th>Benign</th><th>Normal</th><th>Malignant</th></tr></thead>
+            <tbody id="r-models"></tbody>
+          </table>
+          <div class="verdict" id="r-verdict"></div>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">These results were produced by running the published models from the GitHub repository (Random Forest, MLP and SVM, weighted 60/25/15) on 21 images drawn at random from the public Breast Ultrasound Images (BUSI) dataset by Al-Dhabyani et al. Nothing was re-run or hand-picked: 18 of the 21 match the expert label, including the misses. The same dataset was used to train the models, so these samples demonstrate behavior rather than serve as an independent test.</p>
+  </div>
+</section>
+
+<!-- ============ OPEN SOURCE ============ -->
+<section id="open-source">
+  <div class="wrap two-col" style="align-items:center">
+    <div>
+      <span class="label">Open source</span>
+      <h2>Open code for open science.</h2>
+      <p class="lede">The analyzer, trained models and desktop application are published on GitHub under the MIT license, so researchers and students can inspect, reproduce and improve the work.</p>
+      <dl class="repo-facts">
+        <div><dt>Language</dt><dd>Python 3</dd></div>
+        <div><dt>Libraries</dt><dd>scikit-learn, OpenCV</dd></div>
+        <div><dt>Interface</dt><dd>Tkinter desktop app</dd></div>
+        <div><dt>License</dt><dd>MIT</dd></div>
+      </dl>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/arshiaghatak/breast_ultrasound_analyzer" target="_blank" rel="noopener">View the repository</a>
+        <a class="btn btn-ghost" href="impact.html#research">Read the paper</a>
+      </div>
+    </div>
+    <div class="code">
+      <div class="bar"><span>Terminal</span><button class="copy" data-copy="#quickstart">Copy</button></div>
+<pre id="quickstart"><span class="c"># Get the analyzer</span>
+<span class="p">$ </span>git clone https://github.com/arshiaghatak/breast_ultrasound_analyzer
+<span class="p">$ </span>cd breast_ultrasound_analyzer
+<span class="p">$ </span>pip install -r requirements.txt
+
+<span class="c"># Launch the desktop app</span>
+<span class="p">$ </span>python3 breast_cancer_gui.py
+
+<span class="c"># Or classify from the command line</span>
+<span class="p">$ </span>python3 predict_new_image.py</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head center">
+      <span class="label">Development roadmap</span>
+      <h2>Built one validated generation at a time.</h2>
+      <p class="lede">Pink Alert is a research prototype. Each generation adds one capability and is tested before the next begins. Human-subject evaluation will only follow under appropriate clinical, ethical and regulatory oversight.</p>
+    </div>
+    <ol class="roadmap">
+      <li><small>Generation 0 · Complete</small><b>Software</b><span>Analyzer trained on existing ultrasound images, published and open-sourced.</span></li>
+      <li><small>Generation 1 · In progress</small><b>Force-sensing probe</b><span>Four force sensors and an IMU in a 3D-printed probe: tilt, calibration and guidance.</span></li>
+      <li><small>Generation 2</small><b>Phantom testing</b><span>Force sensing mounted on an ultrasound probe and tested on tissue phantoms.</span></li>
+      <li><small>Generation 3</small><b>Sensor fusion</b><span>Ultrasound score combined with a mechanical stiffness estimate; repeatability studies.</span></li>
+      <li><small>Generation 4</small><b>Guided scanning</b><span>Phone interface with a scan map, live guidance and scan history.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap next">
+    <a href="impact.html"><small>Impact</small><h3>From patient to innovator</h3><p>The TEDx talk and the peer-reviewed research behind Pink Alert.</p><span class="go">Watch and read →</span></a>
+    <a href="founder.html"><small>Founder</small><h3>Arshia Ghatak</h3><p>The student researcher and inventor building Pink Alert.</p><span class="go">Meet the founder →</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="disclaimer"><p><strong>Medical disclaimer.</strong> Pink Alert is a research prototype and educational tool. It is not a medical device, has not been cleared by the FDA, and does not diagnose cancer. Always consult a qualified clinician about any breast changes or concerns.</p></div>
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="foot-logo"><img src="assets/img/logo.png" alt="Pink Alert" width="120" height="103"></a>
+        <p class="foot-tag">A clearer tomorrow</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="index.html#device">Device</a></li><li><a href="index.html#analyzer">Analyzer</a></li><li><a href="index.html#demo">Live demo</a></li><li><a href="index.html#open-source">Open source</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="impact.html">Impact</a></li><li><a href="impact.html#research">Research paper</a></li><li><a href="founder.html">Founder</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://github.com/arshiaghatak/breast_ultrasound_analyzer" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://www.youtube.com/watch?v=Pw-6KY_KDwA" target="_blank" rel="noopener">TEDx talk</a></li><li><a href="https://doi.org/10.70251/HYJR2348.41777784" target="_blank" rel="noopener">Paper (DOI)</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span data-year>2026</span> Pink Alert · Arshia Ghatak. Patent pending.</span><span>Code released under the MIT license.</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=30" defer></script>
+<script src="assets/demo/results.js?v=30" defer></script>
+<script src="assets/js/demo.js?v=30" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/RoundedBoxGeometry.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/environments/RoomEnvironment.js" defer></script>
+<script src="assets/js/device3d.js?v=30" defer></script>
+</body>
+</html>
