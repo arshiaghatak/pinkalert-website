@@ -492,7 +492,7 @@ table.data .num { text-align: right; }
 .thumbs { grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(64px, 1fr); flex: 1; }
 .thumbs .thumb { aspect-ratio: auto; }
 .dropzone { aspect-ratio: 16 / 10; }
-.tumor-btn { position: absolute; right: 10px; top: 10px; z-index: 2; font: 500 .74rem var(--sans); color: #fff; background: rgba(23,19,26,.72); border: 1px solid rgba(255,255,255,.35); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+.tumor-btn { position: absolute; right: 10px; top: 10px; z-index: 2; font: 500 .74rem var(--sans); color: #fff; background: rgba(23,19,26,.72); border: 1.5px solid var(--accent-2); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
 .tumor-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
 .tumor-svg { position: absolute; pointer-events: none; z-index: 1; overflow: visible; }
 .tumor-svg path { fill: rgba(236,100,140,.12); stroke: #ec648c; stroke-width: 2; stroke-dasharray: 6 5; vector-effect: non-scaling-stroke; }
