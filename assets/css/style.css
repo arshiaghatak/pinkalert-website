@@ -588,3 +588,10 @@ table.data .num { text-align: right; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq summary:hover { color: var(--accent); }
 .faq p { margin: 10px 0 0; color: var(--ink-2); }
+
+/* pink scrollbar */
+html { scrollbar-color: var(--accent-2) var(--accent-wash); scrollbar-width: auto; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--accent-wash); }
+::-webkit-scrollbar-thumb { background: var(--accent-2); border-radius: 999px; border: 3px solid var(--accent-wash); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
