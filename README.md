@@ -55,4 +55,6 @@ Hosted on Vercel from the `main` branch; every push redeploys the site. The doma
 
 ## License
 
-Code released under the [MIT License](LICENSE) © 2026 Arshia Ghatak.
+The website's code is released under the [MIT License](LICENSE) © 2026 Arshia Ghatak.
+
+The MIT License does **not** cover the Pink Alert name, logo and brand marks, photos of Arshia Ghatak, or the device design materials. These remain the property of Arshia Ghatak and may not be reused without permission. The research paper and the BUSI sample images keep their own terms. See [LICENSE](LICENSE) for details.

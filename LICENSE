@@ -19,3 +19,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+Exclusions
+
+The MIT License above applies to the website's source code only. It does not
+cover the following, which remain the property of Arshia Ghatak and may not be
+reused without written permission:
+
+  - the Pink Alert name, logo, favicon and other brand marks
+    (assets/img/mark-sm.png, wordmark.png, logo.png, logo-full.png, og.png,
+    favicon files and apple-touch-icon.png);
+  - photographs and images of Arshia Ghatak (assets/img/arshia-headshot.jpg,
+    assets/img/tedx-thumbnail.jpg);
+  - the Pink Alert device design materials (assets/img/design-overview.jpg).
+
+The research paper in assets/docs/ is Copyright (c) 2026 Arshia Ghatak et al.,
+published by the American Journal of Student Research under its own terms, and
+is included here for convenience only; it is not licensed under MIT.
+
+Sample ultrasound images in assets/demo/ come from the public Breast Ultrasound
+Images (BUSI) dataset by Al-Dhabyani et al. and remain subject to that
+dataset's terms.
