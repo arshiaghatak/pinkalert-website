@@ -77,7 +77,7 @@ section { padding-block: clamp(72px, 9vw, 120px); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand .mark { height: 34px; width: auto; }
 .brand .word { height: 22px; width: auto; }
-.foot-logo img { width: 120px; height: auto; }
+.foot-logo img { width: 190px; height: auto; }
 .nav-links { display: flex; gap: 4px; margin: 0 0 0 auto; padding: 0; list-style: none; }
 .nav-links a { display: block; padding: 8px 12px; text-decoration: none; color: var(--ink-2); font-size: .94rem; border-radius: var(--r); }
 .nav-links a:hover { color: var(--ink); background: var(--accent-wash); }
