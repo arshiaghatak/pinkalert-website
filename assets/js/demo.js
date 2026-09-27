@@ -159,9 +159,6 @@
     }, count ? 1100 : 0);
   }
 
-  // Open in a working state: show one example result (not counted in the tally).
-  analyze('15', false, false);
-
   $('t-reset').addEventListener('click', () => {
     clearTimeout(timer); seen.clear();
     thumbs.querySelectorAll('.thumb').forEach((t) => { t.className = 'thumb'; t.setAttribute('aria-pressed', 'false'); });
