@@ -74,7 +74,7 @@ const FADE = [
   '.hero-grid > div:first-child > *', '.scan-fig', '.head > *', '.statement > div:first-child > *', '.statement .cols > div',
   '.viewer', '.spec-grid > div', '.sequence li', '.doc-figure', '.pipeline li', '.two-col > * > *', '.two-col > .code', '.pull',
   '.alerts > div', '.results > div', '.demo', '.demo-note', '.roadmap li', '.next a', '.disclaimer', '.foot-grid > div',
-  '.video', '.paper-cover', '.paper > div > *', '.ways > div', '.creds > div', '.founder-grid > div:last-child > :not(.creds)', '.contact > *',
+  '.video', '.paper-cover', '.paper > div > *', '.ways > div', '.creds > div', '.founder-grid > div:last-child > :not(.creds)', '.contact > *', '.signup-grid > *', '.faq',
 ];
 const INLINE = new Set(['EM', 'STRONG', 'SPAN', 'A', 'B', 'SUB', 'BR', 'I']);
 if (!reduceMotion && 'IntersectionObserver' in window) {
