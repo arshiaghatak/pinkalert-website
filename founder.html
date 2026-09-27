@@ -21,6 +21,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <script>
+    // Every reload starts at the top of the page (runs first, before the browser can restore the old scroll position)
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    (function () {
+      var nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || {};
+      var reload = nav.type === 'reload' || (performance.navigation && performance.navigation.type === 1);
+      if (reload && location.hash) history.replaceState(null, '', location.pathname + location.search);
+      var top = function () { if (reload || !location.hash) window.scrollTo(0, 0); };
+      top();
+      document.addEventListener('DOMContentLoaded', top);
+      window.addEventListener('load', function () { top(); setTimeout(top, 0); requestAnimationFrame(top); });
+      window.addEventListener('pageshow', function (e) { if (e.persisted) window.scrollTo(0, 0); });
+      window.addEventListener('beforeunload', function () { window.scrollTo(0, 0); });
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/style.css?v=30">
 </head>
 <body>
