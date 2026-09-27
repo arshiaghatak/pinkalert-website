@@ -12,8 +12,8 @@ This repository is the source for the project website, [pinkalert.ai](https://pi
   - The problem Pink Alert addresses.
   - An interactive 3D model of the force-guided probe (ultrasound transducer, four force sensors, IMU, controller and battery), with clickable parts.
   - How the analyzer works: 29 engineered image features and a weighted ensemble of Random Forest, MLP and SVM models.
-  - A live demo on 21 real ultrasound scans with the models' actual outputs and expert tumor outlines.
   - Links to the open-source code and the development roadmap.
+- **Live Demo:** drag any of 21 real ultrasound scans into the analyzer to see the models' actual outputs, the alert, and the expert tumor outline.
 - **Research & Talks:** the TEDxDVHS talk *From Patient to Innovator*, the peer-reviewed paper *Machine Learning Models for Breast Cancer Diagnosis Using Ultrasound Images* (American Journal of Student Research, 2026), and ways to get involved.
 - **Founder:** Arshia Ghatak's story and background.
 
@@ -26,7 +26,8 @@ The analyzer itself lives in [breast_ultrasound_analyzer](https://github.com/ars
 Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses three.js from a CDN.
 
 ```
-├── index.html        Home: problem, device, analyzer, live demo, open source, roadmap
+├── index.html        Home: problem, device, analyzer, open source, roadmap
+├── demo.html         Live demo on 21 real scans
 ├── research.html     TEDx talk, research paper, get involved
 ├── founder.html      Founder bio
 ├── assets/css/style.css
