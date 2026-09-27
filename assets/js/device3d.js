@@ -90,7 +90,7 @@
   controls.enableDamping = true; controls.dampingFactor = 0.08;
   controls.enablePan = false;
   controls.minDistance = 170; controls.maxDistance = 800;
-  controls.autoRotate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  controls.autoRotate = true; // spins until the visitor turns Auto-rotate off
   controls.autoRotateSpeed = 1.1;
   controls.update();
 
@@ -262,7 +262,7 @@
     if (p.internal && !internals.visible) setInternals(true);
     spots.forEach((s) => s.b.setAttribute('aria-pressed', String(s.p.id === id)));
     panel.list.querySelectorAll('[data-part]').forEach((b) => b.setAttribute('aria-current', String(+b.dataset.part === id)));
-    setSpin(false);
+    // keep spinning: only the Auto-rotate button stops it
     // Turn the model so the chosen part faces the viewer
     const target = new THREE.Vector3(...p.at).applyMatrix4(probe.matrixWorld);
     const dir = (p.n ? new THREE.Vector3(...p.n) : new THREE.Vector3(0.55, 0.15, 1)).normalize().applyQuaternion(probe.quaternion);
@@ -322,7 +322,7 @@
       flyTo(HOME.target.clone(), HOME.pos.clone()); setInternals(false); closeCallout();
     }
   });
-  controls.addEventListener('start', () => { fly = null; setSpin(false); });
+  controls.addEventListener('start', () => { fly = null; });
 
   // Size and render loop (paused while off screen)
   function resize() {
