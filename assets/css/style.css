@@ -595,3 +595,9 @@ html { scrollbar-color: var(--accent-2) var(--accent-wash); scrollbar-width: aut
 ::-webkit-scrollbar-track { background: var(--accent-wash); }
 ::-webkit-scrollbar-thumb { background: var(--accent-2); border-radius: 999px; border: 3px solid var(--accent-wash); }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* footer: link columns sit vertically centred on the tagline logo */
+.foot-grid { align-items: center; }
+.foot-logo { display: block; line-height: 0; }
+.foot-grid > div { align-self: center; }
+.foot-grid > div:not(:first-child) { min-height: 9.125rem; } /* equal-height link columns so their headings line up */
