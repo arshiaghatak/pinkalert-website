@@ -48,7 +48,7 @@
         <h2>You're on the list${first ? ', ' + first.replace(/[<>&"]/g, '') : ''}.</h2>
         <p>We'll email you the moment PinkAlert launches. Thank you for supporting early breast health.</p>
         ${note ? `<p class="fineprint-note">${note}</p>` : ''}
-        <a class="btn btn-ghost" href="demo.html">Try the live demo while you wait</a>
+        <a class="btn btn-ghost" href="/demo">Try the live demo while you wait</a>
       </div>`;
   }
 })();

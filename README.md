@@ -39,6 +39,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 ├── assets/demo/            21 sample scans + results.js (real model outputs, expert outlines)
 ├── assets/docs/            the published paper (PDF)
 ├── assets/img/             logo, favicons, headshot, TEDx thumbnail, design sheet
+├── vercel.json       clean URLs (no .html)
 └── robots.txt, sitemap.xml, site.webmanifest, favicon.ico
 ```
 
@@ -47,10 +48,10 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 ## Run it locally
 
 ```bash
-python3 -m http.server 4173
+npx serve .
 ```
 
-Then open http://localhost:4173.
+Then open the address it prints. Pages use clean URLs (`/demo`, `/research`, `/founder`, `/signup`); `vercel.json` turns this on for Vercel.
 
 ## Deployment
 

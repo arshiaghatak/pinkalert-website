@@ -58,10 +58,13 @@ const toTop = () => { if (!location.hash) window.scrollTo(0, 0); };
 toTop();
 window.addEventListener('load', toTop);
 window.addEventListener('pageshow', (e) => { if (e.persisted) toTop(); });
-const here = (location.pathname.split('/').pop() || 'index.html');
+// Clean URLs (/demo, /founder …): compare paths without ".html" or "index"
+const norm = (p) => ('/' + p.replace(/^\/+/, '').replace(/\.html$/, '').replace(/(^|\/)index$/, '')).replace(/\/+$/, '') || '/';
+const here = norm(location.pathname);
 document.querySelectorAll('.nav-links a, a.brand, a.foot-logo').forEach((a) => {
   a.addEventListener('click', (e) => {
-    const target = (a.getAttribute('href') || '').split('#')[0] || 'index.html';
+    const raw = (a.getAttribute('href') || '').split('#')[0];
+    const target = norm(new URL(raw || '/', location.href).pathname);
     if (target === here) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
   });
 });
