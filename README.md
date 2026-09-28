@@ -39,7 +39,8 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 ├── assets/demo/            21 sample scans + results.js (real model outputs, expert outlines)
 ├── assets/docs/            the published paper (PDF)
 ├── assets/img/             logo, favicons, headshot, TEDx thumbnail, design sheet
-├── vercel.json       clean URLs (no .html)
+├── vercel.json       clean URLs for the pages (no .html)
+├── googlef50983f22951e95f.html   Google Search Console verification (keep)
 └── robots.txt, sitemap.xml, site.webmanifest, favicon.ico
 ```
 
