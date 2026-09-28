@@ -1,10 +1,10 @@
-# PinkAlert · [pinkalert.ai](https://pinkalert.ai)
+# PinkAlert · [pinkalert.ai](https://www.pinkalert.ai)
 
 **Breast health, in your hands.**
 
 PinkAlert is a low-cost, handheld breast ultrasound device paired with an AI assistant that reads each scan as **normal**, **benign** or **malignant** and tells the user, in plain language, whether they are good for now or should see a doctor. It was created by Arshia Ghatak after her own experience with breast cancer as a teenager, to make early breast-health screening accessible to young women who may never be taught what to look for and may not be able to afford a clinical ultrasound.
 
-This repository is the source for the project website, [pinkalert.ai](https://pinkalert.ai).
+This repository is the source for the project website, [pinkalert.ai](https://www.pinkalert.ai).
 
 ## What's on the site
 
