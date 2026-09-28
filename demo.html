@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PinkAlert">
   <meta property="og:title" content="PinkAlert Live Demo">
-  <meta property="og:description" content="Try the PinkAlert breast ultrasound AI on 21 real scans.">
+  <meta property="og:description" content="Try the PinkAlert breast ultrasound AI on 105 real scans.">
   <meta property="og:url" content="https://www.pinkalert.ai/demo">
   <meta property="og:image" content="https://www.pinkalert.ai/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
   <meta name="author" content="Arshia Ghatak">
   <meta name="robots" content="index, follow">
   <meta name="twitter:title" content="PinkAlert Live Demo">
-  <meta name="twitter:description" content="Try the PinkAlert breast ultrasound AI on 21 real scans.">
+  <meta name="twitter:description" content="Try the PinkAlert breast ultrasound AI on 105 real scans.">
   <meta name="twitter:image" content="https://www.pinkalert.ai/assets/img/og.png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.pinkalert.ai/#org", "name": "PinkAlert", "alternateName": ["Pink Alert", "pinkalert.ai"], "url": "https://www.pinkalert.ai/", "logo": "https://www.pinkalert.ai/assets/img/logo-tagline.png", "slogan": "A clearer tomorrow. Breast health in your hands.", "founder": {"@id": "https://www.pinkalert.ai/founder#arshia"}, "sameAs": ["https://github.com/arshiaghatak/breast_ultrasound_analyzer", "https://github.com/arshiaghatak/pinkalert-website"]}, {"@type": "WebSite", "@id": "https://www.pinkalert.ai/#website", "name": "PinkAlert", "url": "https://www.pinkalert.ai/", "publisher": {"@id": "https://www.pinkalert.ai/#org"}, "inLanguage": "en"}, {"@type": "WebPage", "@id": "https://www.pinkalert.ai/demo", "url": "https://www.pinkalert.ai/demo", "name": "PinkAlert Live Demo", "description": "Try the PinkAlert breast ultrasound AI live: drag real ultrasound scans into the analyzer and see its normal, benign or malignant prediction, each model's vote and the expert tumor outline.", "isPartOf": {"@id": "https://www.pinkalert.ai/#website"}, "about": {"@id": "https://www.pinkalert.ai/#org"}}]}</script>
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -43,7 +43,7 @@
       window.addEventListener('beforeunload', function () { window.scrollTo(0, 0); });
     })();
   </script>
-  <link rel="stylesheet" href="assets/css/style.css?v=39">
+  <link rel="stylesheet" href="assets/css/style.css?v=40">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -78,7 +78,7 @@
     <div class="head center">
       <span class="label">Live demo</span>
       <h1>Try the analyzer on <em>real scans.</em></h1>
-      <p class="lede">Drag any of the 21 ultrasound images into the analysis station, or select one. You will see the ensemble's prediction, each model's vote, the alert, and whether the prediction matched the expert label.</p>
+      <p class="lede">Drag any of the 105 ultrasound images into the analysis station, or select one. You will see the ensemble's prediction, each model's vote, the alert, and whether the prediction matched the expert label.</p>
     </div>
   </div>
 </section>
@@ -89,10 +89,15 @@
 
     <div class="demo" id="demo-app">
       <div class="tray">
-        <div class="tray-head"><h3>Sample scans</h3><span>BUSI dataset · 21 images</span></div>
+        <div class="tray-head"><h3>Sample scans</h3><span>BUSI dataset · 105 images</span></div>
         <div class="thumbs" id="thumbs" role="list"></div>
+        <div class="pager" id="pager">
+          <button type="button" class="pg" id="page-prev" aria-label="Previous page">‹</button>
+          <div class="pager-mid"><span id="page-label">Page 1 of 5</span><span class="dots"></span></div>
+          <button type="button" class="pg" id="page-next" aria-label="Next page">›</button>
+        </div>
         <div class="tally">
-          <span>Analyzed <b id="t-done">0</b>/21 · Correct <b id="t-right">0</b></span>
+          <span>Analyzed <b id="t-done">0</b>/105 · Correct <b id="t-right">0</b></span>
           <span class="legend"><span><i style="background:#2e9e72"></i>Matched label</span><span><i style="background:#d08a1c"></i>Missed</span></span>
           <button type="button" id="t-reset">Reset</button>
         </div>
@@ -117,7 +122,7 @@
         </div>
       </div>
     </div>
-    <p class="demo-note">These results were produced by running the published models from the GitHub repository (Random Forest, MLP and SVM, weighted 60/25/15) on 21 distinct images drawn from the public Breast Ultrasound Images (BUSI) dataset by Al-Dhabyani et al. Images that duplicate another scan, or whose expert outline misses a visible lesion, were swapped for other scans; every tumor outline comes from the dataset's expert annotations. The model outputs are shown exactly as produced: 19 of the 21 match the expert label, including the misses. The same dataset was used to train the models, so these samples demonstrate behavior rather than serve as an independent test.</p>
+    <p class="demo-note">These results were produced by running the published models from the GitHub repository (Random Forest, MLP and SVM, weighted 60/25/15) on 105 distinct images drawn from the public Breast Ultrasound Images (BUSI) dataset by Al-Dhabyani et al. Images that duplicate another scan, or whose expert outline misses a visible lesion, were swapped for other scans; every tumor outline comes from the dataset's expert annotations. The model outputs are shown exactly as produced: 94 of the 105 match the expert label, including the misses. The same dataset was used to train the models, so these samples demonstrate behavior rather than serve as an independent test.</p>
   </div>
 </section>
 
@@ -139,7 +144,7 @@
 </footer>
 
 <script src="assets/js/main.js?v=35" defer></script>
-<script src="assets/demo/results.js?v=33" defer></script>
-<script src="assets/js/demo.js?v=32" defer></script>
+<script src="assets/demo/results.js?v=34" defer></script>
+<script src="assets/js/demo.js?v=34" defer></script>
 </body>
 </html>

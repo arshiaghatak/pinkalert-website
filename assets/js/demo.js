@@ -20,19 +20,50 @@
   const seen = new Map();
   let timer = null;
 
-  data.forEach((d) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'thumb';
-    b.draggable = true;
-    b.dataset.id = d.id;
-    b.setAttribute('role', 'listitem');
-    b.setAttribute('aria-label', `Analyze scan ${d.id}`);
-    b.innerHTML = `<img src="${d.img}" alt="" loading="lazy" draggable="false"><span class="id">${d.id}</span>`;
-    b.addEventListener('dragstart', (e) => { e.dataTransfer.setData('text/plain', d.id); e.dataTransfer.effectAllowed = 'copy'; });
-    b.addEventListener('click', () => analyze(d.id, true));
-    thumbs.appendChild(b);
-  });
+  // 21 scans per page; ‹ › buttons (and arrow keys) move between pages
+  const PER_PAGE = 21, PAGES = Math.ceil(data.length / PER_PAGE);
+  let page = 0, selected = null;
+  const pager = $('pager'), pageLabel = $('page-label'), prev = $('page-prev'), next = $('page-next');
+
+  function renderPage(p) {
+    page = Math.max(0, Math.min(PAGES - 1, p));
+    thumbs.innerHTML = '';
+    data.slice(page * PER_PAGE, (page + 1) * PER_PAGE).forEach((d) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'thumb' + (seen.has(d.id) ? ' done ' + (seen.get(d.id) ? 'right' : 'wrong') : '');
+      b.draggable = true;
+      b.dataset.id = d.id;
+      b.setAttribute('role', 'listitem');
+      b.setAttribute('aria-label', `Analyze scan ${d.id}`);
+      b.setAttribute('aria-pressed', String(d.id === selected));
+      b.innerHTML = `<img src="${d.img}" alt="" loading="lazy" draggable="false"><span class="id">${d.id}</span>`;
+      b.addEventListener('dragstart', (e) => { e.dataTransfer.setData('text/plain', d.id); e.dataTransfer.effectAllowed = 'copy'; });
+      b.addEventListener('click', () => analyze(d.id, true));
+      thumbs.appendChild(b);
+    });
+    if (pageLabel) pageLabel.textContent = `Page ${page + 1} of ${PAGES}`;
+    if (prev) prev.disabled = page === 0;
+    if (next) next.disabled = page === PAGES - 1;
+    if (pager) pager.querySelectorAll('.dot').forEach((dot, i) => dot.setAttribute('aria-current', String(i === page)));
+  }
+  if (pager) {
+    const dots = pager.querySelector('.dots');
+    for (let i = 0; i < PAGES; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button'; dot.className = 'dot'; dot.setAttribute('aria-label', `Page ${i + 1}`);
+      dot.addEventListener('click', () => renderPage(i));
+      dots.appendChild(dot);
+    }
+    prev.addEventListener('click', () => renderPage(page - 1));
+    next.addEventListener('click', () => renderPage(page + 1));
+    app.addEventListener('keydown', (e) => {
+      if (e.target.closest('input, select, textarea')) return;
+      if (e.key === 'ArrowLeft') renderPage(page - 1);
+      if (e.key === 'ArrowRight') renderPage(page + 1);
+    });
+  }
+  renderPage(0);
 
   // Desktop drag-and-drop
   zone.addEventListener('dragover', (e) => { e.preventDefault(); e.dataTransfer.dropEffect = 'copy'; zone.classList.add('over'); });
@@ -111,6 +142,7 @@
   function analyze(id, fromClick, count = true) {
     const d = data.find((x) => x.id === id); if (!d) return;
     clearTimeout(timer);
+    selected = id;
     thumbs.querySelectorAll('.thumb').forEach((t) => t.setAttribute('aria-pressed', String(t.dataset.id === id)));
 
     zone.querySelectorAll('img, .stamp, .tumor-btn, .tumor-svg, .tumor-note').forEach((n) => n.remove());
@@ -147,20 +179,20 @@
       const v = $('r-verdict'); v.className = 'verdict ' + (ok ? 'right' : 'wrong');
       v.innerHTML = ok
         ? `<b>Matches the expert label.</b> This image is labelled ${CLASSES[d.truth].toLowerCase()} in the dataset.`
-        : `<b>Missed.</b> This image is labelled ${CLASSES[d.truth].toLowerCase()} in the dataset, but the ensemble predicted ${CLASSES[d.pred].toLowerCase()}. Errors like this are why PinkAlert always routes users to a clinician.`;
+        : `<b>Missed.</b> This image is labelled ${CLASSES[d.truth].toLowerCase()} in the dataset, but the ensemble predicted ${CLASSES[d.pred].toLowerCase()}. PinkAlert is an early-warning aid, not a diagnosis, which is why any breast change should still be checked by a doctor.`;
       result.hidden = false;
 
       if (!count) return;
       seen.set(id, ok);
       const t = thumbs.querySelector(`[data-id="${id}"]`);
-      t.classList.add('done', ok ? 'right' : 'wrong');
+      if (t) t.classList.add('done', ok ? 'right' : 'wrong');
       $('t-done').textContent = seen.size;
       $('t-right').textContent = [...seen.values()].filter(Boolean).length;
     }, count ? 1100 : 0);
   }
 
   $('t-reset').addEventListener('click', () => {
-    clearTimeout(timer); seen.clear();
+    clearTimeout(timer); seen.clear(); selected = null;
     thumbs.querySelectorAll('.thumb').forEach((t) => { t.className = 'thumb'; t.setAttribute('aria-pressed', 'false'); });
     zone.querySelectorAll('img, .stamp, .tumor-btn, .tumor-svg, .tumor-note').forEach((n) => n.remove());
     zone.querySelector('.empty').hidden = false; zone.classList.remove('scanning');

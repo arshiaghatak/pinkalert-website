@@ -13,7 +13,7 @@ This repository is the source for the project website, [pinkalert.ai](https://ww
   - An interactive 3D model of the force-guided probe (ultrasound transducer, four force sensors, IMU, controller and battery), with clickable parts.
   - How the analyzer works: 29 engineered image features and a weighted ensemble of Random Forest, MLP and SVM models.
   - Links to the open-source code and the development roadmap.
-- **Live Demo:** drag any of 21 real ultrasound scans into the analyzer to see the models' actual outputs, the alert, and the expert tumor outline.
+- **Live Demo:** drag any of 105 real ultrasound scans into the analyzer to see the models' actual outputs, the alert, and the expert tumor outline.
 - **Research & Talks:** the TEDxDVHS talk *From Patient to Innovator*, the peer-reviewed paper *Machine Learning Models for Breast Cancer Diagnosis Using Ultrasound Images* (American Journal of Student Research, 2026), and ways to get involved.
 - **Founder:** Arshia Ghatak's story and background.
 - **Sign Up:** a launch list; visitors leave their email to be notified when PinkAlert is available (sent through Formspree).
@@ -28,7 +28,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 
 ```
 ├── index.html        Home: problem, device, analyzer, open source, roadmap
-├── demo.html         Live demo on 21 real scans
+├── demo.html         Live demo on 105 real scans
 ├── research.html     TEDx talk, research paper, get involved
 ├── founder.html      Founder bio
 ├── signup.html       Launch-list sign-up (assets/js/signup.js)
@@ -36,7 +36,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 ├── assets/js/main.js       menu, fade-ins, count-ups, video, copy buttons
 ├── assets/js/device3d.js   interactive 3D probe (three.js)
 ├── assets/js/demo.js       drag-and-drop analyzer demo
-├── assets/demo/            21 sample scans + results.js (real model outputs, expert outlines)
+├── assets/demo/            105 sample scans + results.js (real model outputs, expert outlines)
 ├── assets/docs/            the published paper (PDF)
 ├── assets/img/             logo, favicons, headshot, TEDx thumbnail, design sheet
 ├── vercel.json       clean URLs for the pages (no .html)
@@ -44,7 +44,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 └── robots.txt, sitemap.xml, site.webmanifest, favicon.ico
 ```
 
-**Demo data:** `assets/demo/results.js` holds the outputs of the published models (RF 60% / MLP 25% / SVM 15%) on 21 distinct images from the public BUSI dataset (Al-Dhabyani et al.), with duplicates and incompletely annotated scans swapped out. 19 of the 21 match the expert label. The images were also used in training, so the demo shows behavior, not an independent test.
+**Demo data:** `assets/demo/results.js` holds the outputs of the published models (RF 60% / MLP 25% / SVM 15%) on 105 distinct images from the public BUSI dataset (Al-Dhabyani et al.), with duplicates and incompletely annotated scans swapped out. 94 of the 105 match the expert label. The images were also used in training, so the demo shows behavior, not an independent test.
 
 ## Run it locally
 
