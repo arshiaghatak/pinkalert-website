@@ -44,7 +44,7 @@ Plain HTML, CSS and a little JavaScript, with no build step. The 3D model uses t
 └── robots.txt, sitemap.xml, site.webmanifest, favicon.ico
 ```
 
-**Demo data:** `assets/demo/results.js` holds the outputs of the published models (RF 60% / MLP 25% / SVM 15%) on 105 distinct images from the public BUSI dataset (Al-Dhabyani et al.), with duplicates and incompletely annotated scans swapped out. 94 of the 105 match the expert label. The images were also used in training, so the demo shows behavior, not an independent test.
+**Demo data:** `assets/demo/results.js` holds the outputs of the published models (RF 60% / MLP 25% / SVM 15%) on 105 distinct images from the public BUSI dataset (Al-Dhabyani et al.), with duplicates and incompletely annotated scans swapped out. 93 of the 105 match the expert label. The images were also used in training, so the demo shows behavior, not an independent test.
 
 ## Run it locally
 
